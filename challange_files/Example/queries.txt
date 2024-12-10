@@ -1,0 +1,19 @@
+# Comment Alpha
+book CampY 2026/11/23
+is_booked CampY 2026/11/23
+book 006 2026/11/24
+book 006 2026/11/23
+
+# Comment Bravo
+book CampZ 2026/10/23
+
+# Comment Charlie
+is_available Yellow 2027/01/01
+book 002 2027/01/01
+is_available Yellow 2027/01/01
+book 003 2027/01/01
+book Yellow 2027/01/01
+book Blue 2027/01/01
+is_booked CampX 2027/01/01
+book CampX 2027/01/01
+book 001 2027/01/01
