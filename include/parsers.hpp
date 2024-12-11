@@ -1,6 +1,6 @@
 #pragma once
 
-#include <map>
+#include <unordered_map>
 #include <string>
 #include <vector>
 
@@ -14,7 +14,7 @@ struct Query {
     std::string date;
 };
 
-std::map <std::string, std::string> parse_args(int argc, char* argv[]);
+std::unordered_map <std::string, std::string> parse_args(int argc, char* argv[]);
 nlohmann::json parse_json(const std::string& filename);
 std::vector <Query> parse_queries(const std::string& filename);
 
