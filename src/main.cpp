@@ -20,14 +20,15 @@ int main(int argc, char* argv[])
             throw std::runtime_error("Failed to open file: " + output_file);
         }
         for (int i = 0; i < queries.size(); i++) {
-            if (queries[i].query == "book") {
-                outfile << resource_manager.book(queries[i].id, queries[i].date);
+            auto query = queries[i];
+            if (query.query == "book") {
+                outfile << resource_manager.book(query.id, query.date);
             }
-            else if (queries[i].query == "is_booked") {
-                outfile << resource_manager.is_booked(queries[i].id, queries[i].date);
+            else if (query.query == "is_booked") {
+                outfile << resource_manager.is_booked(query.id, query.date);
             }
-            else if (queries[i].query == "is_available") {
-                outfile << resource_manager.is_available(queries[i].id, queries[i].date);
+            else if (query.query == "is_available") {
+                outfile << resource_manager.is_available(query.id, query.date);
             }
             // add a newline after each query, except the last one
             if (i < queries.size() - 1) {

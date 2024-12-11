@@ -80,3 +80,4 @@ same child object.
 and if we look at the tree image we can see for example that both the nodes "Yellow" and "Green" references the node "002".
 So when "Green" and all of its child objects are booked then "Yellow" is no longher available either since "002" is now booked.
 
+![Alt Text](docs/call_tree.png)
