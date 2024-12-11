@@ -12,8 +12,12 @@ A booker app for booking and check availability of resources
 ### Clone the Repository
 ```bash
 git clone https://github.com/JesperFritsch/booker_challange.git
+```
 or
+```bash
 git clone git@github.com:JesperFritsch/booker_challange.git
+```
+```bash
 cd booker_challange
 ```
 
