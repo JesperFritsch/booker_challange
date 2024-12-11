@@ -67,7 +67,7 @@ When booking a resource, all resources below is also booked and therefore no lon
 
 We can create a tree structure where each node in the tree is an object that represents a resource.
 Each resource object can have a list of references to each of it's child objects in the tree.
-This lets us find all resources that is contained by a certain other resource by looking at the first
+This lets us find all resources that is contained by a certain other resource by looking at the
 nodes children and then all of the childrens children and so on.
 
 And when we book a resource we know that we should book all of its children and so on.
@@ -75,6 +75,6 @@ And when we book a resource we know that we should book all of its children and 
 Since each resource object holds references to its children, two objects can hold a reference to the
 same child object.
 
-and if we look at the tree image we can see for example that both the node "Yellow" and "Green" references the node "002".
+and if we look at the tree image we can see for example that both the nodes "Yellow" and "Green" references the node "002".
 So when "Green" and all of its child objects are booked then "Yellow" is no longher available either since "002" is now booked.
 
