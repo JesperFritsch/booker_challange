@@ -4,15 +4,17 @@
 A booker app for booking and check availability of resources
 
 ## Requirements
-- C++17 (or specify another version if applicable)
+- C++17
 - CMake 3.15 or higher
 
 ## Getting Started
 
 ### Clone the Repository
 ```bash
-git clone <repository-url>
-cd <repository-directory>
+git clone https://github.com/JesperFritsch/booker_challange.git
+or
+git clone git@github.com:JesperFritsch/booker_challange.git
+cd booker_challange
 ```
 
 ### Build Instructions
@@ -41,15 +43,11 @@ After building, the application executable will be located in the `build/bin/Deb
 
 Run it with:
 ```bash
+cd build/bin/Debug/
 ./booker resource.json queries.txt output.txt
 ```
 
 ## Testing
-This project uses CMake's testing framework (CTest) for unit tests. To add a test, include the following in your CMakeLists.txt file:
-```cmake
-add_test(NAME <test-name> COMMAND <test-executable>)
-```
-
 Run tests with:
 ```bash
    ctest --test-dir build --verbose -C Debug
