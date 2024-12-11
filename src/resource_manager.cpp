@@ -14,7 +14,7 @@ std::shared_ptr<Resource> ResourceManager::get_resource(std::string id)
 std::string ResourceManager::is_booked(std::string id, std::string date)
 // check if a resource is booked on a given date
 {
-    auto resource = this->get_resource(id);
+    auto resource = get_resource(id);
     if (resource == nullptr) {
         throw std::runtime_error("Resource not found: " + id);
     }
@@ -24,7 +24,7 @@ std::string ResourceManager::is_booked(std::string id, std::string date)
 std::string ResourceManager::is_available(std::string id, std::string date)
 // check if a resource and all of its sub-resources are available on a given date
 {
-    auto resource = this->get_resource(id);
+    auto resource = get_resource(id);
     if (resource == nullptr) {
         throw std::runtime_error("Resource not found: " + id);
     }
@@ -34,7 +34,7 @@ std::string ResourceManager::is_available(std::string id, std::string date)
 std::string ResourceManager::book(std::string id, std::string date)
 // book a resource on a given date
 {
-    auto resource = this->get_resource(id);
+    auto resource = get_resource(id);
     if (resource == nullptr) {
         throw std::runtime_error("Resource not found: " + id);
     }
@@ -50,11 +50,11 @@ void ResourceManager::add_resource(std::string parent_id, std::string id)
 // add a resource to the resource manager
 // if parent_id is not an empty string, add the resource as a sub-resource of the parent
 {
-    auto parent = this->get_resource(parent_id);
+    auto parent = get_resource(parent_id);
     if (parent_id != "" && parent == nullptr) {
         throw std::runtime_error("Parent resource not found: '" + parent_id + "'");
     }
-    this->_add_resource(parent, id);
+    _add_resource(parent, id);
     return;
 }
 
