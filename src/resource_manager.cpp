@@ -71,9 +71,9 @@ void ResourceManager::_add_resource(std::shared_ptr<Resource> parent, std::strin
 }
 
 void ResourceManager::populate_resources_from_json(json& json_obj, std::string parent_id){
-    // here we assume that any string values (not keys) are resource ids
-    // and populate the resource manager with them recursively.
-    // No error checking is done here, we assume the json is well-formed.
+// here we assume that any string values (not keys) are resource ids
+// and populate the resource manager with them recursively.
+// No error checking is done here, we assume the json is well-formed.
     std::string next_parent_id = parent_id;
     if(json_obj.contains("id")) {
         next_parent_id = json_obj["id"].get<std::string>();

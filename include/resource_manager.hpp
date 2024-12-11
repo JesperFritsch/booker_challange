@@ -16,6 +16,7 @@ class ResourceManager{
         void add_resource(std::string parent_id, std::string id);
         void populate_resources_from_json(json& json_obj, std::string parent_id);
     private:
+        // Using a hash map to store resources for quick access
         std::unordered_map<std::string, std::shared_ptr<Resource>> _resources;
         void _add_resource(std::shared_ptr<Resource> parent, std::string id);
 };

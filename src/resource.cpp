@@ -18,11 +18,10 @@ void Resource::add_sub_resource(std::shared_ptr<Resource> sub_resource)
 }
 
 void Resource::book(std::string date)
-/*book this resource and all its sub-resources on a given date
-book does not check if the resource is available, it is assumed that the resource is checked for availability before booking.
-if book would check if the resource is available, it would traverse the whole tree.
-Also if we are half way down the tree and we find that a sub-resource is not available, we would have to un-book all the resources that were booked so far.
-*/
+// Book this resource and all its sub-resources on a given date.
+// book does not check if the resource is available, it is assumed that the resource is checked for availability before booking.
+// if book would check if the resource is available, it would traverse the whole (sub)tree multiple times, which is inefficient.
+// Also if we are half way down the tree and we find that a sub-resource is not available, we would have to un-book all the resources that were booked so far.
 {
     _dates_booked.push_back(date);
     for (auto sub_resource : _sub_resources){
