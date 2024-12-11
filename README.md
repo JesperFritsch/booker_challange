@@ -39,10 +39,10 @@ cd booker_challange
    ```
 
 ### Running the Application
-After building, the application executable will be located in the `build/bin/Debug` directory.
+After building, the application executable will be located in `build/bin/Debug` on windows and `build/bin` on linux.
 #### The application needs 3 arguments:
-1. resourse.json (example file in /challange_files)
-2. queries.txt (example file in /challange_files)
+1. resourse.json (example file in /challange_files/Example)
+2. queries.txt (example file in /challange_files/Example)
 3. output.txt (will be created)
 
 Run it with:
